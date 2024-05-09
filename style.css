@@ -1,0 +1,188 @@
+:root {
+  --nutmeg: hsl(14, 45%, 36%);
+  --darkRaspberry: hsl(332, 51%, 32%);
+  --white: hsl(0, 0%, 100%);
+  --roseWhite: hsl(330, 100%, 98%);
+  --eggshell: hsl(30, 54%, 90%);
+  --lightGrey: hsl(30, 18%, 87%);
+  --wengeBrown: hsl(30, 10%, 34%);
+  --darkCharcoal: hsl(24, 5%, 18%);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--eggshell);
+}
+
+h1 {
+  font-size: 26px;
+  font-weight: 400;
+  margin: 10px 0;
+}
+
+h1,
+h2 {
+  font-family: "Young Serif", sans-serif;
+}
+
+h2 {
+  color: var(--nutmeg);
+  font-weight: 500;
+  margin: 10px 0;
+}
+
+p {
+  font-family: "Outfit";
+  margin: 8px 0;
+  font-size: 12px;
+  color: var(--wengeBrown);
+}
+
+ol {
+  color: var(--darkCharcoal);
+}
+
+ol li {
+  margin: 10px 20px;
+  font-size: 12px;
+  padding-left: 10px;
+}
+
+ul li {
+  font-size: 12px;
+  margin: 7px 25px;
+}
+
+ol li::marker {
+  color: var(--nutmeg);
+  font-weight: bold;
+}
+
+ul li::marker {
+  color: var(--nutmeg);
+}
+
+hr {
+  margin: 20px 0;
+}
+
+table {
+  width: 100%;
+  font-family: "Outfit";
+  font-size: 0.9em;
+  margin-top: 15px;
+  text-indent: 0;
+  border-color: inherit;
+  border-collapse: collapse;
+}
+
+tbody tr td {
+  padding: 10px;
+  border-bottom: 1px solid var(--lightGrey);
+}
+
+#preparation-time-title {
+  color: var(--darkRaspberry);
+  font-weight: 600;
+}
+
+.card {
+  background-color: var(--white);
+  border-radius: 15px;
+  width: 470px;
+  padding: 20px;
+}
+
+.img-container img {
+  width: 100%;
+  border-radius: 5px;
+}
+
+.preparation-container {
+  font-family: "Outfit";
+  background-color: var(--roseWhite);
+  padding: 15px;
+  margin-top: 20px;
+  border-radius: 10px;
+}
+
+.preparation-container li::marker {
+  content: "•";
+  color: var(--darkRaspberry);
+}
+
+.preparation-container ul li {
+  padding-left: 10px;
+  font-size: 0.8rem;
+}
+
+.instructions-container,
+.ingredients-container {
+  font-family: "Outfit";
+}
+
+.nutrition-container {
+  margin-top: 10px;
+}
+
+.stats {
+  color: var(--nutmeg);
+  font-family: inherit;
+  font-weight: 700;
+}
+
+/* MOBILE DESIGN  */
+/* WHEN THE MAX WIDTH OF THE SCREEN IS 575PX OR LESS */
+
+@media screen and (max-width: 575px) {
+  h1 {
+    padding: 10px 35px;
+  }
+
+  p {
+    font-size: 14px;
+    padding: 0 35px;
+  }
+
+  table {
+    text-align: center;
+  }
+
+  .card {
+    padding: 0;
+    width: 375px;
+  }
+
+  .img-container {
+    height: 200px;
+    width: 100%;
+    background-image: url("assets/images/image-omelette.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .img-container img {
+    display: none;
+  }
+
+  .ingredients-container,
+  .instructions-container,
+  .nutrition-container,
+  .preparation-container {
+    padding: 0 20px;
+  }
+
+  .preparation-container {
+    margin: 20px;
+    padding: 10px;
+  }
+}
